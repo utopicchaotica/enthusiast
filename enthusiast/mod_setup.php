@@ -282,7 +282,7 @@ function do_step1() {
             '`added` date default NULL, ' .
             'PRIMARY KEY( email ), ' .
             'FULLTEXT( email, name, country, url ) ' .
-            ') TYPE=MyISAM;';
+            ') ENGINE=MyISAM;';
 
          $db_link_list = mysql_connect( $dbserver, $dbuser, $dbpassword )
             or die( DATABASE_CONNECT_ERROR . mysql_error() );

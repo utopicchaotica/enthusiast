@@ -909,7 +909,7 @@ function edit_owned( $id, $fields ) {
                   "`email` varchar(255) NOT NULL default '', " .
                   "`added` DATE NOT NULL default '0000-00-00', " .
                   "PRIMARY KEY( affiliateid ) " .
-                  ") TYPE=MyISAM AUTO_INCREMENT=1";
+                  ") ENGINE=MyISAM AUTO_INCREMENT=1";
                $result = mysql_query( $query );
                if( !$result ) {
                   log_error( __FILE__ . ':' . __LINE__,

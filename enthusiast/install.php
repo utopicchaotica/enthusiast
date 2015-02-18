@@ -142,7 +142,7 @@ if( isset( $_POST['install'] ) && $_POST['install'] == 'yes' ) {
          '`email` varchar(255) NOT NULL default \'\',' .
          '`added` date default NULL,' .
          'PRIMARY KEY  (`affiliateid`)' .
-         ') TYPE=MyISAM AUTO_INCREMENT=1';
+         ') ENGINE=MyISAM AUTO_INCREMENT=1';
       $success = mysql_query( $query ) or die( '<p class="error">Error ' .
          'executing query: ' . mysql_error() . '; <i>' . $query . '</i></p>' );
       if( !$success )
@@ -155,7 +155,7 @@ if( isset( $_POST['install'] ) && $_POST['install'] == 'yes' ) {
          '`catname` varchar(255) NOT NULL default \'\', ' .
          '`parent` int(5) NOT NULL DEFAULT \'0\', ' .
          'PRIMARY KEY  (`catid`)' .
-         ') TYPE=MyISAM AUTO_INCREMENT=1';
+         ') ENGINE=MyISAM AUTO_INCREMENT=1';
       $success = mysql_query( $query ) or die( '<p class="error">Error ' .
          'executing query: ' . mysql_error() . '; <i>' . $query . '</i></p>' );
       if( !$success )
@@ -170,7 +170,7 @@ if( isset( $_POST['install'] ) && $_POST['install'] == 'yes' ) {
          '`content` text NOT NULL,' .
          '`deletable` tinyint(1) NOT NULL default \'1\',' .
          'PRIMARY KEY  (`templateid`)' .
-         ') TYPE=MyISAM AUTO_INCREMENT=2';
+         ') ENGINE=MyISAM AUTO_INCREMENT=2';
       $success = mysql_query( $query ) or die( '<p class="error">Error ' .
          'executing query: ' . mysql_error() . '; <i>' . $query . '</i></p>' );
       if( !$success )
@@ -202,7 +202,7 @@ if( isset( $_POST['install'] ) && $_POST['install'] == 'yes' ) {
          '`pending` tinyint(1) NOT NULL default \'0\',' .
          'PRIMARY KEY  (`joinedid`),' .
          'FULLTEXT KEY `subject` (`subject`,`desc`,`comments`)' .
-         ') TYPE=MyISAM AUTO_INCREMENT=1';
+         ') ENGINE=MyISAM AUTO_INCREMENT=1';
       $success = mysql_query( $query ) or die( '<p class="error">Error ' .
          'executing query: ' . mysql_error() . '; <i>' . $query . '</i></p>' );
       if( !$success )
@@ -250,7 +250,7 @@ if( isset( $_POST['install'] ) && $_POST['install'] == 'yes' ) {
          '`status` tinyint(1) NOT NULL default \'0\',' .
          'PRIMARY KEY  (`listingid`),' .
          'FULLTEXT KEY `title` (`title`,`subject`,`url`,`desc`)' .
-         ') TYPE=MyISAM AUTO_INCREMENT=1';
+         ') ENGINE=MyISAM AUTO_INCREMENT=1';
       $success = mysql_query( $query ) or die( '<p class="error">Error ' .
          'executing query: ' . mysql_error() . '; <i>' . $query . '</i></p>' );
       if( !$success )
@@ -275,7 +275,7 @@ if( isset( $_POST['install'] ) && $_POST['install'] == 'yes' ) {
          '`value` text NOT NULL,' .
          '`help` text NOT NULL,' .
          'PRIMARY KEY  (`setting`)' .
-         ') TYPE=MyISAM';
+         ') ENGINE=MyISAM';
       $success = mysql_query( $query ) or die( '<p class="error">Error ' .
          'executing query: ' . mysql_error() . '; <i>' . $query . '</i></p>' );
       if( !$success )
